@@ -11,6 +11,7 @@ Se utiliza **JDBC** y el **patrón DAO**.
 
 ## Estructura del proyecto
 
+```
 src/
 ├─ main/java/
 │ ├─ dao/ # DAO: ProfesorDAO, CursoDAO, EstudianteDAO
@@ -19,6 +20,7 @@ src/
 │ └─ main/ # Clase Main con menú
 └─ main/resources/
 └─ database.properties
+```
 
 ---
 
@@ -40,11 +42,11 @@ src/
 ## Configuración
 
 `database.properties`:
-
+```
 user=""
 pass=""
-url=jdbc:mysql://127.0.0.1:3306/GestionCursos
-
+url=jdbc:mysql://127.0.0.1:3306/GestionCursos`
+```
 
 ---
 
@@ -60,7 +62,7 @@ cursoDAO.insertarDato(curso1);
 Estudiante est1 = new Estudiante(20, "Laura");
 estudianteDAO.insertarDato(est1);
 estudianteDAO.asignarEstudianteACurso(est1.getId(), curso1.getId());
-
+```
 ---
 
 ## Funcionalidades
