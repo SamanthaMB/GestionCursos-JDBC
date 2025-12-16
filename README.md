@@ -9,7 +9,7 @@ Se utiliza **JDBC** y el **patrón DAO**.
 
 ---
 
-## Estructura del proyecto
+## 🗂 Estructura del proyecto
 
 ```
 src/
@@ -24,22 +24,22 @@ src/
 
 ---
 
-## Base de datos
+## 🗄 Base de datos
 
 **Nombre:** `GestionCursos`
 
 **Tablas:**
 
-- **profesores:** `id` (PK), `nombre`  
-- **cursos:** `id` (PK), `nombre`, `id_profesor` (FK)  
-- **estudiantes:** `id` (PK), `nombre`  
-- **cursos_estudiantes:** `id_curso` (FK), `id_estudiante` (FK), PK compuesta  
+- 👨‍🏫 **profesores:** `id` (PK), `nombre`  
+- 📘 **cursos:** `id` (PK), `nombre`, `id_profesor` (FK)  
+- 👩‍🎓 **estudiantes:** `id` (PK), `nombre`  
+- 🔗**cursos_estudiantes:** `id_curso` (FK), `id_estudiante` (FK), PK compuesta  
 
 > Nota: Los IDs no son autoincrementales.
 
 ---
 
-## Configuración
+## ⚙️ Configuración
 
 `database.properties`:
 ```
@@ -50,7 +50,7 @@ url=jdbc:mysql://127.0.0.1:3306/GestionCursos`
 
 ---
 
-## Ejemplo de uso
+## 💻 Ejemplo de uso
 
 ```java
 Profesor prof1 = new Profesor(1, "Samantha Mohedano");
@@ -65,28 +65,28 @@ estudianteDAO.asignarEstudianteACurso(est1.getId(), curso1.getId());
 ```
 ---
 
-## Funcionalidades
+## ✨ Funcionalidades
 
 - CRUD completo para **profesores, cursos y estudiantes**
 - Asignación de estudiantes a cursos
 - Mostrar cursos de un profesor
 - Mostrar estudiantes de un curso
 
-## Mejoras futuras
+## 🔮 Mejoras futuras
 
 - IDs **autoincrementales**
 - Separar la lógica en **Controllers**
 - Migración a **Hibernate/JPA**
 - Mejor manejo de errores y validaciones
 
-## Buenas prácticas
+## 🏆 Buenas prácticas
 
 - Patrón **DAO**
 - Uso de **PreparedStatement**
 - Paquetes organizados (`model`, `dao`, `util`, `main`)
 - Métodos descriptivos y claros
 
-## Conclusión personal
+## 📝 Conclusión personal
 
 Me gustó hacer este proyecto y “pelearme” con él, aprendiendo sobre **JDBC**, relaciones **1:N y N:M**, y cómo estructurar un proyecto Java con DAO.  
 Una mejora sería usar **IDs autoincrementales** para evitar errores al insertar manualmente.
